@@ -1,6 +1,6 @@
 {
   "name": "poop-sock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities that I like",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AdamSeidman/poop-sock/issues"
   },
-  "homepage": "https://github.com/AdamSeidman/poop-sock#readme"
+  "homepage": "https://github.com/AdamSeidman/poop-sock#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
 }
