@@ -27,7 +27,7 @@ module.exports = {
      * @param {*} callback - Callback function. Is called before exiting the process.
      */
     restartApp: function (cmd, response, callback) {
-        if (callback !== undefined) {
+        if (callback !== undefined && typeof callback === 'function') {
             callback();
         }
         if (response !== undefined) {
