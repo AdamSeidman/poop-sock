@@ -7,6 +7,7 @@
  */
 
 const Discord = require('discord.js')
+const emojiDict = require('emoji-dictionary')
 
 const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -155,6 +156,24 @@ module.exports = {
         return user;
     },
 
-    webHeaders: headers
+    webHeaders: headers,
+
+    /**
+     * Get random emoji from dictionary
+     * @returns Unicode character
+     */
+    randomEmoji: function () {
+        return emojiDict.unicode[Math.floor(Math.random() * emojiDict.unicode.length)];
+    },
+
+    /**
+     * Get the name of a unicode emoji
+     * @param {string} emoji - Unicode emoji
+     * @returns Name of the emoji that was provided
+     */
+    getEmojiName: function (emoji) {
+        if (emoji === undefined) return emoji;
+        return emojiDict.getName(emoji) || '';
+    }
 
 };

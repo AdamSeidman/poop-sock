@@ -1,6 +1,6 @@
 {
   "name": "poop-sock",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utilities that I like",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AdamSeidman/poop-sock#readme",
   "dependencies": {
-    "discord.js": "^14.14.1"
+    "discord.js": "^14.14.1",
+    "emoji-dictionary": "^1.0.11"
   }
 }
