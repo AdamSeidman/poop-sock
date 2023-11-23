@@ -153,6 +153,8 @@ module.exports = {
         if ( discordContext === undefined ) return discordContext;
         let user = await discordContext.users.fetch(id);
         return user;
-    }
+    },
+
+    webHeaders: headers
 
 };
