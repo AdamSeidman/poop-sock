@@ -174,6 +174,19 @@ module.exports = {
     getEmojiName: function (emoji) {
         if (emoji === undefined) return emoji;
         return emojiDict.getName(emoji) || '';
+    },
+
+    /**
+     * Shuffle an array using the Durstenfeld shuffle algorithm
+     * @param {array} array - An array to be shuffled
+     */
+    shuffleArray: function (array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
     }
 
 };
