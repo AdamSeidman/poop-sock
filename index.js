@@ -187,6 +187,19 @@ module.exports = {
             array[i] = array[j];
             array[j] = temp;
         }
+    },
+
+    /**
+     * Check if the last character in the string is punctuation.
+     * @param {string} phrase - Phrase to check if terminated.
+     * @returns Boolean, whether or not string is terminated.
+     */
+    isStringTerminated: function (phrase) {
+        if (phrase === undefined) return false;
+        if (typeof phrase !== 'string') return false;
+        phrase = phrase.trim();
+        if (phrase.length === 0) return false;
+        return ['.', '!', '?', ')', ']'].includes(phrase.slice(-1));
     }
 
 };
