@@ -197,9 +197,8 @@ module.exports = {
     isStringTerminated: function (phrase) {
         if (phrase === undefined) return false;
         if (typeof phrase !== 'string') return false;
-        phrase = phrase.trim();
-        if (phrase.length === 0) return false;
-        return ['.', '!', '?', ')', ']'].includes(phrase.slice(-1));
+        if (phrase.trim().length === 0) return false;
+        return ['.', '!', '?', ')', ']'].includes(phrase.trim().slice(-1));
     }
 
 };
